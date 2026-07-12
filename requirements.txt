@@ -1,0 +1,5 @@
+# Core dependency for the evaluation harness
+pandas>=2.0
+
+# Required only for the live LLM path (real_data_eval.py --live)
+anthropic>=0.40
