@@ -1,5 +1,9 @@
 # Clinical SOAP Note Agent — Evaluation
 
+[![eval](https://github.com/Harikakoduri12/Clinical_SOAP_Note_Agent/actions/workflows/eval.yml/badge.svg)](https://github.com/Harikakoduri12/Clinical_SOAP_Note_Agent/actions/workflows/eval.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+
 Evaluation suite for a clinical **SOAP-note generation** pipeline: given a
 doctor–patient conversation, produce a structured note with four sections —
 **S**ubjective, **O**bjective, **A**ssessment, **P**lan — and then *measure how
