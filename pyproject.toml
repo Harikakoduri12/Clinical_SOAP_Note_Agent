@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clinical-soap-agent"
+version = "1.0.0"
+description = "Clinical conversation to structured SOAP note with agentic self-correction, RAG grounding, and PHI guardrails"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Harika Koduri"}
+]
+keywords = ["clinical-nlp", "soap-notes", "ambient-documentation", "healthcare-ai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Healthcare Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "pydantic>=2.0",
+    "faker>=20.0",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "pandas>=2.0",
+    "sentence-transformers>=2.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+llm = [
+    "anthropic>=0.40",
+]
+audio = [
+    "openai-whisper>=20231117",
+]
+
+[project.urls]
+Homepage = "https://github.com/Harikakoduri12/Clinical_SOAP_Note_Agent"
+Repository = "https://github.com/Harikakoduri12/Clinical_SOAP_Note_Agent"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
